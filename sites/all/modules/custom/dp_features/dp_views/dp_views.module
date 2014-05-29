@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DP Views feature.
+ */
+
+include_once 'dp_views.features.inc';

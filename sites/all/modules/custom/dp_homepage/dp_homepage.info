@@ -1,0 +1,8 @@
+name = DP Homepage
+description = Creates custom Panel Panes to be used on the Homepage Page
+core = 7.x
+package = Double Prime
+dependencies[] = ctools
+dependencies[] = panels
+dependencies[] = views
+files[] = dp_homepage.module

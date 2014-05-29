@@ -1,0 +1,52 @@
+<?php
+
+function dp_homepage_preprocess_page(&$vars, $hook) {
+  $path = drupal_get_path('module', 'dp_homepage');
+
+  drupal_add_js($path . '/dp_homepage.js', array('weight' => 999));
+  $vars['scripts'] = drupal_get_js(); 
+}
+
+function dp_homepage_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools' && $plugin_type == 'content_types') {
+    return 'plugins/content_types';
+  }
+}
+
+function dp_homepage_ctools_plugin_api($module, $api) {
+  if ($module == 'page_manager' && $api == 'pages_default') {
+    return array('version' => 1);
+  }
+}
+
+/**
+ * Implementation of hook_views_api
+ */
+function dp_homepage_views_api() {
+    return array(
+        'api' => 3,
+    );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function dp_homepage_menu() {
+  $items['admin/config/system/contact'] = array(
+    'title' => t('Contact Form'),
+    'description' => t('Settings for the Contact Form'),
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('contact_settings_form'),
+    'access arguments' => array('administer modules'),
+    'type' => MENU_NORMAL_ITEM,
+    'file' => 'dp_homepage.admin.inc',
+  );
+  $items['contact_form_submit'] = array(
+    'page callback' => 'contact_form_submit',
+    'access callback' => TRUE,
+    'file' => 'plugins/content_types/contact/dp_homepage_contact.inc',
+    'type' => MENU_CALLBACK, 
+  );
+
+  return $items;
+}

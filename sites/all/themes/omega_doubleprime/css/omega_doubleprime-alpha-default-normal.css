@@ -1,0 +1,4 @@
+/* This file will hold styles that are loaded using the same media query as the normal grid. */
+/* If you are using the default media queries provided by Omega, these styles will also
+ *  apply to the widescreen layout unless they are overridden by the widescreen styles. */
+/* A 'base partial' file that contains sass code that all files should inherit, such as @import statements (for importing Compass or other libraries) and global variables such as color values. 'Partial' files, beginning with an underscore, are not compiled into CSS files themselves, but are imported into other .scss files.  */

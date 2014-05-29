@@ -1,0 +1,6 @@
+name = Contact Us Form
+description = Contact Us Form module
+package = Double Prime
+core = 7.x
+version = 7.x-1.x-dev
+

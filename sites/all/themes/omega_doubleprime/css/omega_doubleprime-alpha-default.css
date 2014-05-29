@@ -1,0 +1,2 @@
+/* This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
+/* A 'base partial' file that contains sass code that all files should inherit, such as @import statements (for importing Compass or other libraries) and global variables such as color values. 'Partial' files, beginning with an underscore, are not compiled into CSS files themselves, but are imported into other .scss files.  */

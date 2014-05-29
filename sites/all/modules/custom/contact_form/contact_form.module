@@ -1,0 +1,6 @@
+<?php
+
+module_load_include('inc', 'contact_form', 'contact_form.form');
+module_load_include('inc', 'contact_form', 'contact_form.menu');
+module_load_include('inc', 'contact_form', 'contact_form.admin');
+module_load_include('inc', 'contact_form', 'contact_form.theme');
